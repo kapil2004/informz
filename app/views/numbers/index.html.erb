@@ -1,0 +1,11 @@
+<ul>
+<% @numbers.each do |num| %>
+
+  <li id=<%= "num_#{num}" %> class='numbers' data-num=<%= num %>  >
+    <span class='fizzbuzz'>
+      <%= num %>
+    </span>
+  </li>
+
+<% end %>
+</ul>
