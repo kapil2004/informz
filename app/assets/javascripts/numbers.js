@@ -6,10 +6,9 @@ $(function(){
     
     $.ajax('/numbers/fizzbuzz', {
       data: {num: num},
-      // dataType: 'text',
+      dataType: 'text',
       method: 'GET',
       success: function(result) {
-        alert(result);
         $(_this).find('.fizzbuzz').text(result);
       }
     });

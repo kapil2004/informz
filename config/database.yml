@@ -5,13 +5,13 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql
+  adapter: sqlite3
   pool: 5
   timeout: 5000
 
 development:
   <<: *default
-  database: informz_development
+  database: db/development.sqlite3
   
 
 # Warning: The database defined as "test" will be erased and
@@ -19,7 +19,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: informz_test
+  database: db/test.sqlite3
 
 production:
   <<: *default
